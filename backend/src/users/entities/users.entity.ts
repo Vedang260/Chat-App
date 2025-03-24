@@ -20,6 +20,12 @@ export class User{
     @Column()
     lastSeenAt: Date;
 
+    @Column({ nullable: true })
+    otp: string;
+
+    @Column()
+    isVerified: boolean;
+    
     @CreateDateColumn()
     createdAt: Date;
 
