@@ -23,6 +23,9 @@ export class User{
     @Column({ nullable: true })
     otp: string;
 
+    @Column()
+    otpExpirationTime: Date;
+    
     @Column({ default: false })
     isVerified: boolean;
 

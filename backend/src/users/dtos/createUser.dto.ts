@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty, IsString, IsStrongPassword } from "class-validator";
+import { IsDateString, IsEmail, IsNotEmpty, IsString, IsStrongPassword } from "class-validator";
 
 export class CreateUserDto {
     @IsNotEmpty()
@@ -18,4 +18,8 @@ export class CreateUserDto {
     @IsNotEmpty()
     @IsString()
     otp: string;
+
+    @IsNotEmpty()
+    @IsDateString()
+    otpExpirationTime: Date;
 }
