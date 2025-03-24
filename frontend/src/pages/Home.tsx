@@ -54,7 +54,7 @@ const HeroTitle = styled.h1`
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  background: linear-gradient(135deg, rgb(50, 83, 136), rgb(6, 80, 114));
+  background: linear-gradient(135deg, rgb(75, 102, 146), rgb(32, 116, 155));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -86,14 +86,14 @@ const GetStartedButton = styled(motion.button)`
   text-transform: uppercase;
   border: none;
   border-radius: 50px;
-  background: linear-gradient(135deg, rgb(56, 100, 130), rgb(138, 81, 162));
+  background: linear-gradient(135deg, rgb(63, 117, 153), rgb(176, 116, 202));
   color: #fff;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
   &:hover {
-    background: linear-gradient(135deg, rgb(138, 81, 162), rgb(56, 100, 130)); /* Reverse gradient */
+    background: linear-gradient(135deg, rgb(99, 39, 125), rgb(27, 112, 169)); /* Reverse gradient */
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   }
@@ -111,10 +111,10 @@ const Home: React.FC = () => {
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
         <HeroTitle as={motion.h1} initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }}>
-          Welcome to Samvaad
+          Samvaad
         </HeroTitle>
         <HeroDescription>
-          Connect with friends, share moments, and experience seamless communication in a vibrant, modern way.
+        Connect with 🙌🏻 kindred souls, cherish unforgettable moments ✨, and weave your story in a world where conversations feel like home. 🏡💖
         </HeroDescription>
         <GetStartedButton onClick={() => navigate('/login')} whileHover={{ scale: 1.1 }}>
           Get Started
