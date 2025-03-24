@@ -14,18 +14,18 @@ export class User{
     @Column()
     password: string;
 
-    @Column()
+    @Column({ default: false })
     isOnline: boolean;
 
-    @Column()
+    @Column({ nullable: true })
     lastSeenAt: Date;
 
     @Column({ nullable: true })
     otp: string;
 
-    @Column()
+    @Column({ default: false })
     isVerified: boolean;
-    
+
     @CreateDateColumn()
     createdAt: Date;
 
