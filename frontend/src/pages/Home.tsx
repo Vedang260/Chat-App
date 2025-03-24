@@ -71,7 +71,7 @@ const HeroDescription = styled.p`
   max-width: 600px;
   line-height: 1.6;
   text-align: center;
-  color: rgb(71, 88, 122);
+  color: rgb(80, 44, 50);
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
