@@ -37,7 +37,7 @@ const HeroContent = styled(motion.div)`
   padding: 40px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.15); /* Soft transparent background */
-  backdrop-filter: blur(15px); /* Frosted glass effect */
+  backdrop-filter: blur(25px); /* Frosted glass effect */
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
   max-width: 80%;
   transition: all 0.3s ease;
