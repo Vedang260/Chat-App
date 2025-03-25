@@ -14,12 +14,4 @@ export class CreateUserDto {
     @IsString()
     @IsStrongPassword()
     password: string;
-
-    @IsNotEmpty()
-    @IsString()
-    otp: string;
-
-    @IsNotEmpty()
-    @IsDateString()
-    otpExpirationTime: Date;
 }
