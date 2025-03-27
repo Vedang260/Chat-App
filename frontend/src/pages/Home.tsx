@@ -37,10 +37,18 @@ const HeroContent = styled(motion.div)`
   padding: 40px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.15); /* Soft transparent background */
+  + border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(25px); /* Frosted glass effect */
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
   max-width: 80%;
   transition: all 0.3s ease;
+  animation: subtleZoom 20s infinite alternate; // Add this line
+
+  // Keyframes should be defined globally (outside the component)
+  @keyframes subtleZoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+  }
 
   @media (max-width: 768px) {
     padding: 30px;
