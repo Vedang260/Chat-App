@@ -124,7 +124,7 @@ const Home: React.FC = () => {
         <HeroDescription>
         Connect with 🙌🏻 kindred souls, cherish unforgettable moments ✨, and weave your story in a world where conversations feel like home. 🏡💖
         </HeroDescription>
-        <GetStartedButton onClick={() => navigate('/login')} whileHover={{ scale: 1.1 }}>
+        <GetStartedButton onClick={() => navigate('/signup')} whileHover={{ scale: 1.1 }}>
           Get Started
         </GetStartedButton>
       </HeroContent>

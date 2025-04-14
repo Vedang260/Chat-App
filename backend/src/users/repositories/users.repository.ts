@@ -6,7 +6,7 @@ import { CreateUserDto } from "../dtos/createUser.dto";
 @Injectable()
 export class UsersRepository extends Repository<User>{
 
-    async findByEmail(email: string): Promise<User | null>{
+    async findUserByEmail(email: string): Promise<User | null>{
         try{
             return await this.findOne({ where: {email}});
         }catch(error){
