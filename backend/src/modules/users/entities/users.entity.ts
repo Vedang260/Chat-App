@@ -1,4 +1,6 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { ChatRoom } from "src/modules/chats/entities/chatRoom.entity";
+import { Message } from "src/modules/chats/entities/messages.entity";
+import { Column, CreateDateColumn, Entity, ManyToMany, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity({ name: 'user' })
 export class User{
@@ -29,6 +31,12 @@ export class User{
     @Column({ default: false })
     hasStatus: boolean;
 
+    @ManyToMany(() => ChatRoom, chatRoom => chatRoom.participants)
+    chatRooms: ChatRoom[];
+
+    @OneToMany(() => Message, message => message.sender)
+    sentMessages: Message[];
+    
     @CreateDateColumn()
     createdAt: Date;
 
