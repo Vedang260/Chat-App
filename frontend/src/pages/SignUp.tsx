@@ -23,6 +23,7 @@ import {
   FaEye, 
   FaEyeSlash 
 } from 'react-icons/fa';
+import { loginUser, registerUser } from '../config/services/auth';
 
 const MotionBox = motion(Box);
 const MotionButton = motion(Button);
@@ -119,18 +120,34 @@ const SignUp = () => {
     return valid;
   };
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    if (validateForm()) {
-      // Simulate successful signup
-      toast({
-        title: 'Account created.',
-        description: "We've created your account successfully!",
-        status: 'success',
-        duration: 3000,
-        isClosable: true,
-      });
-      setTimeout(() => navigate('/'), 1500);
+  const handleSubmit = async (e: any) => {
+    try{
+        e.preventDefault();
+        if (validateForm()) {
+            const response = await registerUser(formData);
+            if(response?.success){
+                // Simulate successful signup
+                toast({
+                    title: 'Account created.',
+                    description: response?.message,
+                    status: 'success',
+                    duration: 3000,
+                    isClosable: true,
+                });
+                navigate('/dashboard');
+            }
+            else{
+                toast({
+                    title: 'Failure',
+                    description: response?.message,
+                    status: 'error',
+                    duration: 3000,
+                    isClosable: true,
+                });
+            }
+        }
+    }catch(error){
+
     }
   };
 
