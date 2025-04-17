@@ -11,13 +11,13 @@ export class ChatRoom{
     isGroup: boolean;
     
     @Column({ nullable: true })
-    groupName: string;
+    groupName?: string;
 
     @Column({ nullable: true })
-    groupIcon: string;
+    groupIcon?: string;
 
     @Column({ default: false })
-    description: string;
+    description?: string;
 
     @ManyToOne(() => User, { nullable: true })
     createdBy: User;

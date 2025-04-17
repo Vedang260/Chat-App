@@ -29,6 +29,9 @@ export class User{
     lastSeen: Date;
 
     @Column({ default: false })
+    isPrivate: boolean;
+
+    @Column({ default: false })
     hasStatus: boolean;
 
     @ManyToMany(() => ChatRoom, chatRoom => chatRoom.participants)
